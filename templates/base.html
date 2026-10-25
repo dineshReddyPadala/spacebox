@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#142f29">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="robots" content="{{ robots }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:type" content="website"><meta property="og:site_name" content="SpaceBox Concepts"><meta property="og:title" content="{{ title }}"><meta property="og:description" content="{{ description }}"><meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image|default(site_url + '/static/images/social-preview.webp') }}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/static/images/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/static/css/prototype.css">
+<link rel="stylesheet" href="/static/css/production.css">
+<script type="application/ld+json" nonce="{{ nonce }}">{"@context":"https://schema.org","@type":"Organization","name":"SpaceBox Concepts","url":"{{ site_url }}","logo":"{{ site_url }}/static/images/spacebox-logo.png","description":"Beauty, wellness, quality and transparency in interiors and architecture."}</script>
+{% block head %}{% endblock %}
+</head>
+<body>
+<header id="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="/" aria-label="SpaceBox Concepts — home"><img class="brandLogo" src="/static/images/spacebox-logo.png" alt="SpaceBox Concepts logo" width="166" height="45"></a>
+    <button class="menuToggle" type="button" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navlinks">☰ Menu</button>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="/">Home</a><a href="/apartments">Apartments</a><a href="/villas">Villas</a><a href="/manduva-homes">Manduva Homes</a><a href="/offices">Offices</a><a href="/commercial-spaces">Commercial</a><a href="/wellness">Wellness+</a><a href="/our-process">Our Process</a><a href="/cost-guide">Cost Guide</a><a href="/projects">Projects</a><a href="/about">About</a><a href="/spacebox-ai">SpaceBox AI</a>
+    </nav>
+    <div class="navAction"><a class="btn gold" href="/contact">Start Your Project ↗</a></div>
+  </div>
+</header>
+<main id="main" tabindex="-1">{% block main %}{% endblock %}</main>
+<footer id="footer">
+<div class="wrap">
+  <div class="footer-grid">
+    <div>
+      <a class="footerLogoWrap" href="/" aria-label="SpaceBox home"><img class="brandLogo" src="/static/images/spacebox-logo.png" alt="SpaceBox Concepts"></a>
+      <span class="footerBrandLine">Beautiful Spaces, Better Living.</span>
+      <p>Thoughtful interiors, wellness-led design and distinctive Manduva Homes. Beautiful Design, Wellness, Quality and Transparency are at the heart of everything we create.</p>
+    </div>
+    <div><h4>Our Expertise</h4><a href="/apartments">Apartments</a><a href="/villas">Villas</a><a href="/manduva-homes">Manduva Homes</a><a href="/offices">Offices</a><a href="/commercial-spaces">Commercial Spaces</a><a href="/wellness">Wellness+</a></div>
+    <div><h4>Explore</h4><a href="/our-process">Our Design Process</a><a href="/cost-guide">Cost Guide</a><a href="/projects">Projects</a><a href="/about">About Us</a><a href="/spacebox-ai">SpaceBox AI — Coming Soon</a><a href="/privacy">Privacy Policy</a></div>
+    <div><h4>Let's Connect</h4><p>Design enquiries and collaborations</p><a href="tel:{{ contact_phone|replace(' ','') }}">{{ contact_phone }}</a><a href="mailto:{{ contact_email }}">{{ contact_email }}</a><a href="/contact" class="link">Request a consultation ↗</a></div>
+  </div>
+  <div class="footerBottom"><span>© SpaceBox Concepts. All rights reserved.</span><span>BEAUTIFUL DESIGN · WELLNESS · QUALITY · TRANSPARENCY</span></div>
+</div>
+</footer>
+<script src="/static/js/site.js" defer></script>
+</body></html>

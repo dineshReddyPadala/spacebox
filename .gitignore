@@ -1,0 +1,10 @@
+.env
+local.db
+*.db
+*.db-shm
+*.db-wal
+private_media/
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/

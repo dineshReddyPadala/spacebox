@@ -1,0 +1,6 @@
+{% for project in projects %}
+<a class="portfolioCard" href="/projects/{{ project.slug }}">
+ {% if project.photos %}<img loading="lazy" src="/media/{{ project.photos[0].filename }}" alt="{{ project.photos[0].alt or project.title }}" width="640" height="420">{% else %}<div class="project-photo-placeholder">SpaceBox project</div>{% endif %}
+ <div class="inside"><span class="eyebrow dark">{{ project.category }} · {{ project.status }}</span><h3>{{ project.title }}</h3><p class="muted">{{ project.location }}</p><span class="link">View project ↗</span></div>
+</a>
+{% endfor %}

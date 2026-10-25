@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block main %}
+<section class="section sand project-detail-header"><div class="wrap"><a href="/projects" class="eyebrow dark">← ALL PROJECTS</a><h1>{{ project.title }}</h1><div class="project-metadata"><span>{{ project.category }}</span><span>{{ project.status }}</span>{% if project.location %}<span>{{ project.location }}</span>{% endif %}</div><p>{{ project.description }}</p><a href="/contact" class="btn dark">Discuss a Similar Project ↗</a></div></section>
+<section class="section"><div class="wrap"><div class="project-gallery">{% for photo in project.photos %}<figure><img loading="{% if loop.first %}eager{% else %}lazy{% endif %}" src="/media/{{ photo.filename }}" alt="{{ photo.alt or project.title }}" width="1400" height="900"><figcaption>{{ photo.alt or project.title }}</figcaption></figure>{% endfor %}</div></div></section>
+<section class="section dark"><div class="wrap"><h2>Planning your own space?</h2><p>Let's explore a design and execution approach shaped around your needs.</p><a href="/contact" class="btn gold">Book a Consultation ↗</a></div></section>
+{% endblock %}
